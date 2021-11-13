@@ -14129,7 +14129,7 @@ function validateRangeRequestCapabilities({
     return returnValues;
   }
 
-  if (getResponseHeader("Accept-Ranges") !== "bytes") {
+  if ((getResponseHeader("Accept-Ranges") !== "bytes") && (getResponseHeader("accept-ranges") !== "bytes")) {
     return returnValues;
   }
 
